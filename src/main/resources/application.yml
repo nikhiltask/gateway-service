@@ -32,8 +32,9 @@ spring:
           uri: http://localhost:3020
           predicates:
             - Path=/postsOrComments/{postOrCommentId}/**
-        - id: LIKE-SERVICE
-          uri: http://localhost:3020
+
+        - id: authentication-authorization-service
+          uri: http://localhost:3000
           predicates:
             - Path=/auth/**
 eureka:
