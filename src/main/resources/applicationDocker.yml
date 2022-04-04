@@ -9,32 +9,32 @@
 #    gateway:
 #      routes:
 #        - id: USER-SERVICE
-#          uri: http://localhost:3005
+#          uri: http://host.docker.internal:3005
 #          predicates:
 #            - Path=/users/**
 #
 #        - id: COMMENT-SERVICE
-#          uri: http://localhost:3015
+#          uri: http://host.docker.internal:3015
 #          predicates:
 #            - Path=/posts/{postId}/comments/**
 #
 #        - id: POST-SERVICE
-#          uri: http://localhost:3010
+#          uri: http://host.docker.internal:3010
 #          predicates:
 #            - Path=/posts/**
 #
 #        - id: COMMENT-SERVICE
-#          uri: http://localhost:3015
+#          uri: http://host.docker.internal:3015
 #          predicates:
 #            - Path=/posts/{postId}/comments/**
 #
 #        - id: LIKE-SERVICE
-#          uri: http://localhost:3020
+#          uri: http://host.docker.internal:3020
 #          predicates:
 #            - Path=/postsOrComments/{postOrCommentId}/**
 #
 #        - id: authentication-authorization-service
-#          uri: http://localhost:3000
+#          uri: http://host.docker.internal:3000
 #          predicates:
 #            - Path=/auth/**
 #eureka:
@@ -42,7 +42,7 @@
 #    fetch-registry: true
 #    register-with-eureka: true
 #    service-url:
-#      defaultZone: ${eureka_url:http://localhost:8761/eureka}
+#      defaultZone: ${eureka_url:http://172.17.0.2:8761/eureka}
 ##    instance:
 ##      preferIpAddress: false
 ##
